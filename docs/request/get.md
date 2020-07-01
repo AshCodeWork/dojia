@@ -10,7 +10,7 @@ nav_order: 1
 
 ```js
 let p = 需求请求的参数(对象类型)
-this.request
+this.axios
     .get( 请求地址 , {
         params: p,
     })
@@ -25,7 +25,7 @@ this.request
 例子:
 
 ```js
-this.request
+this.axios
     .get('mock/list', {
         params: {
             page: 1,

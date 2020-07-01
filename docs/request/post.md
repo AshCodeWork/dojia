@@ -15,7 +15,7 @@ post请求默认为form请求。会对参数进行表单处理成`key=value&key2
 
 ```js
 let p = 需求请求的参数(对象类型)
-this.request
+this.axios
     .post( 请求地址 , p)
     .then(res => {
         console.log(res)
@@ -29,7 +29,7 @@ this.request
 
 ```js
 // 假如给mock/set接口，发送参数name：123. 表单提交
-this.request
+this.axios
     .post('mock/set', {
         name: 123,
     })
@@ -49,7 +49,7 @@ this.request
 ```js
 // 第三个参数传入 { toJSON: true }
 let p = 需求请求的参数(对象类型)
-this.request
+this.axios
     .post( 请求地址 , p, { toJSON: true })
     .then(res => {
         console.log(res)
@@ -61,7 +61,7 @@ this.request
 例子：
 
 ```js
-this.request
+this.axios
     .post(
         'mock/set',
         {
@@ -86,7 +86,7 @@ this.request
 ```js
 // 第三个参数传入 { toJSON: true }
 let p = 需求请求的参数(对象类型)
-this.request
+this.axios
     .post( 请求地址 , p, { pure: true })
     .then(res => {
         console.log(res)
@@ -99,7 +99,7 @@ this.request
 
 ```js
 // 假设拦截器定义了一个时间戳，而我们想在请求上增加一个时间戳，不使用拦截器的
-this.request
+this.axios
     .post(
         'mock/set',
         {
